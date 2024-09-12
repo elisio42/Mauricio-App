@@ -54,10 +54,10 @@ const Data = () => {
 
   return (
     <>
-      <Tabs defaultValue="all">
-        <div className="flex items-center">
+      <Tabs className="rounded-none" defaultValue="all">
+        <div className="flex items-center text-slate-700 ">
           <TabsList>
-            <TabsTrigger value="all">Lista</TabsTrigger>
+            <TabsTrigger className="text-slate-600 text-sm" value="all">Lista</TabsTrigger>
           </TabsList>
           <div className="ml-auto flex items-center gap-2">
             <div className="relative ml-auto flex-1 md:grow-0">
@@ -67,10 +67,10 @@ const Data = () => {
                 value={searchValue}
                 onChange={(e) => setSearchValue(e.target.value)}
                 placeholder="Buscar..."
-                className="w-full rounded-lg bg-background pl-8 md:w-[200px] lg:w-[336px]"
+                className="w-full bg-background pl-8 md:w-[200px] lg:w-[336px]"
               />
             </div>
-            <Button size="sm" className="h-12 gap-1 bg-[#E85C0D]">
+            <Button size="sm" className="gap-1 bg-[#E85C0D]">
               <PlusCircle className="h-3.5 w-3.5" />
               <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">
                 Adicionar
@@ -78,10 +78,10 @@ const Data = () => {
             </Button>
           </div>
         </div>
-        <TabsContent value="all">
-          <Card x-chunk="dashboard-06-chunk-0">
+        <TabsContent className="" value="all">
+          <Card x-chunk="dashboard-06-chunk-0" className="rounded-none border-none shadow-none">
             <CardHeader>
-              <CardTitle>Clientes</CardTitle>
+              <CardTitle className="text-3xl text-slate-700">Clientes</CardTitle>
               <CardDescription>
                 Sistema de Agendamento de servicos pela dashboard.
               </CardDescription>
@@ -118,7 +118,7 @@ const Data = () => {
                         </div>
                       </TableCell>
                       <TableCell className="font-medium">
-                        {client.firstName}
+                        {client.firstName} {' '} {client.lastName}
                       </TableCell>
                       <TableCell>
                         <Badge variant="outline" className='bg-green-200'>{client.appointment}</Badge>

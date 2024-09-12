@@ -85,14 +85,13 @@ const  Sidebar = () => {
       </Breadcrumb>
       
       <div className="relative ml-auto flex-1 md:grow-0">
-        Admin
+        <p>Elisio_Augusto</p>
       </div>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button
-            variant="outline"
             size="icon"
-            className="overflow-hidden rounded-full"
+            className="overflow-hidden rounded-full bg-[#758694] "
           >
             {user ? (
               <p className="text-sm font-medium">{userInitials}</p>

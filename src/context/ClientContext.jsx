@@ -29,7 +29,7 @@ export const ClientProvider = ({ children }) => {
     // Clean up the listener on unmount
     return () => unsubscribe();
   }, []);
-  console.log(clients)
+  
   const createClient = async (clientData) => {
     setLoading(true);
     setError(null);
